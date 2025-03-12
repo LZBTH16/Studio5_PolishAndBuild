@@ -9,6 +9,7 @@ public class Brick : MonoBehaviour
     {
         if (destroyRoutine != null) return;
         if (!other.gameObject.CompareTag("Ball")) return;
+        GameManager.Instance.IncreaseScore();
         destroyRoutine = StartCoroutine(DestroyWithDelay());
     }
 

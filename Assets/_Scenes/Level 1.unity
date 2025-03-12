@@ -819,7 +819,7 @@ MonoBehaviour:
   ball: {fileID: 2054714181}
   bricksContainer: {fileID: 1170594424}
   score: 0
-  scoreCounter: {fileID: 0}
+  scoreCounter: {fileID: 1425951107}
 --- !u!1001 &443665624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2295,9 +2295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current: {fileID: 232863104}
   toUpdate: {fileID: 986988876}
-  scoreTextContainer: {fileID: 0}
+  scoreTextContainer: {fileID: 1909920885}
   duration: 0.4
-  animationCurve: 30
+  animationCurve: 32
 --- !u!1001 &1439957631
 PrefabInstance:
   m_ObjectHideFlags: 0
