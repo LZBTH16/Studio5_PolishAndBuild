@@ -39,6 +39,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
 
         // implement particle effect here
         explosionParticlesInstance = Instantiate(explosionParticles, position, Quaternion.identity);
+        Destroy(explosionParticlesInstance.gameObject, 1);
 
         // add camera shake here
         currentBrickCount--;

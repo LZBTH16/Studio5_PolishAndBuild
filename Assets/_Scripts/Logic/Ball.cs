@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -18,7 +19,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // spawn in particles
+        // spawn in ball hit particles
         SpawnHitParticles();
 
 
@@ -33,9 +34,11 @@ public class Ball : MonoBehaviour
         }
     }
 
+    // spawning ball hit particles
     private void SpawnHitParticles()
     {
         hitParticlesInstance = Instantiate(hitParticles, transform.position, Quaternion.identity);
+        Destroy(hitParticlesInstance.gameObject, 1);
     }
 
     public void ResetBall()
