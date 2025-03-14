@@ -820,6 +820,7 @@ MonoBehaviour:
   bricksContainer: {fileID: 1170594424}
   score: 0
   scoreCounter: {fileID: 1425951107}
+  explosionParticles: {fileID: 8180951623508153654, guid: e2c2ae1c70c7beb419edd059e462aba6, type: 3}
 --- !u!1001 &443665624
 PrefabInstance:
   m_ObjectHideFlags: 0

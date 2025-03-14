@@ -100,6 +100,7 @@ MonoBehaviour:
   maxBallBounceBackSpeed: 10
   ballAnchor: {fileID: 0}
   rb: {fileID: 8959031048966596842}
+  hitParticles: {fileID: 4638897334510826756, guid: 3b051983e5ac324499b96868bfc5b9d0, type: 3}
 --- !u!1 &4625805382739171240
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,10 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     private int currentBrickCount;
     private int totalBrickCount;
 
+    // adding brick explosion particles
+    [SerializeField] private GameObject explosionParticles;
+    private GameObject explosionParticlesInstance;
+
     private void OnEnable()
     {
         InputHandler.Instance.OnFire.AddListener(FireBall);
@@ -32,7 +36,11 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     public void OnBrickDestroyed(Vector3 position)
     {
         // fire audio here
+
         // implement particle effect here
+        explosionParticlesInstance = Instantiate(explosionParticles, position, Quaternion.identity);
+        Destroy(explosionParticlesInstance.gameObject, 1);
+
         // add camera shake here
         currentBrickCount--;
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
