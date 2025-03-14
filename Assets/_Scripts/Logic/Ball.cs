@@ -12,8 +12,16 @@ public class Ball : MonoBehaviour
 
     private bool isBallActive;
 
+    //adding dust when ball hits surfaces
+    [SerializeField] private ParticleSystem hitParticles;
+    private ParticleSystem hitParticlesInstance;
+
     private void OnCollisionEnter(Collision other)
     {
+        // spawn in particles
+        SpawnHitParticles();
+
+
         if(other.gameObject.CompareTag("Paddle"))
         {
             Vector3 directionToFire = (transform.position - other.transform.position).normalized;
@@ -23,6 +31,11 @@ public class Ball : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
         }
+    }
+
+    private void SpawnHitParticles()
+    {
+        hitParticlesInstance = Instantiate(hitParticles, transform.position, Quaternion.identity);
     }
 
     public void ResetBall()
