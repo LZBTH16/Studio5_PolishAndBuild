@@ -24,7 +24,7 @@ public class LivesUI : MonoBehaviour
 
     public void UpdateLives(int lives)
     {
-        updateLives.SetText($"{ lives }");
+        updateLives.SetText($"{lives}");
         livesTextContainer.DOLocalMoveY(containerInitPosition + moveAmount, duration).SetEase(animationCurve);
         StartCoroutine(ResetLivesContainer(lives));
     }
