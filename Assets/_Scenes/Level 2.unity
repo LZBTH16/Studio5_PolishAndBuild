@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974931f4f8dc9e4488be5abbaae0f42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLives: {fileID: 109992813}
+  currentLives: {fileID: 1773978536}
   updateLives: {fileID: 488476266}
   livesTextContainer: {fileID: 1928455687}
   duration: 0.4

@@ -58,7 +58,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         livesCounter.UpdateLives(maxLives);
 
         // game over UI if maxLives < 0, then exit to main menu after delay
-        if (maxLives < 0)
+        if (maxLives < 1)
         {
             Time.timeScale = 0f;
             gameOverPanel.SetActive(true);
