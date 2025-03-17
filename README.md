@@ -7,3 +7,6 @@
 - Score
 ### Caitlin Chang (73292526)
 - Audio Manager
+
+### itch.io link to game
+https://sol9342.itch.io/breakout3d 
