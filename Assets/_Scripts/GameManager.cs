@@ -62,6 +62,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         {
             Time.timeScale = 0f;
             gameOverPanel.SetActive(true);
+            AudioManager.Instance.StopMusic("background-music"); //stops music in background
+            AudioManager.Instance.PlaySFX("game-over"); //plays game over sound
             StartCoroutine(ReturnToMenu());
         }
 

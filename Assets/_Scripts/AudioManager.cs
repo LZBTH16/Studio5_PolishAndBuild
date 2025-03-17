@@ -58,4 +58,10 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(s.clip);
         }
     }
+
+    public void StopMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        musicSource.Stop();
+    }
 }
