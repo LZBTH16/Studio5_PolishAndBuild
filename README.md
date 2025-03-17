@@ -12,7 +12,9 @@
 https://sol9342.itch.io/breakout3d
 
 ### Video Demo
-https://github.com/user-attachments/assets/6dda2d39-babe-445f-a72c-fc6f662501a4
+https://github.com/user-attachments/assets/f2a6f752-4195-4c9e-ae53-e68fb0e6b226
+
+
 
 ### Credit(s)
 - Music and sound effects from ZapSplat
