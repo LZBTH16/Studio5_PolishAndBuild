@@ -39,7 +39,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     public void OnBrickDestroyed(Vector3 position)
     {
         // fire audio here
-
+        AudioManager.Instance.PlaySFX("break-brick");
         // implement particle effect here
         explosionParticlesInstance = Instantiate(explosionParticles, position, Quaternion.identity);
         Destroy(explosionParticlesInstance.gameObject, 1);
