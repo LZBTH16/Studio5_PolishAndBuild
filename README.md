@@ -9,4 +9,7 @@
 - Audio Manager
 
 ### itch.io link to game
-https://sol9342.itch.io/breakout3d 
+https://sol9342.itch.io/breakout3d
+
+### Credit(s)
+- Music and sound effects from ZapSplat
