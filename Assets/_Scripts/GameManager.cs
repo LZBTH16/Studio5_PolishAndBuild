@@ -40,13 +40,14 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     {
         // fire audio here
         AudioManager.Instance.PlaySFX("break-brick");
+        
         // implement particle effect here
         explosionParticlesInstance = Instantiate(explosionParticles, position, Quaternion.identity);
         Destroy(explosionParticlesInstance.gameObject, 1);
 
         // add camera shake here
         currentBrickCount--;
-        Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
+        //Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
         if(currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
     }
 
