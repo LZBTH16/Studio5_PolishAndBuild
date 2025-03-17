@@ -39,7 +39,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     public void OnBrickDestroyed(Vector3 position)
     {
         // fire audio here
-
+        AudioManager.Instance.PlaySFX("break-brick");
         // implement particle effect here
         explosionParticlesInstance = Instantiate(explosionParticles, position, Quaternion.identity);
         Destroy(explosionParticlesInstance.gameObject, 1);
@@ -62,6 +62,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         {
             Time.timeScale = 0f;
             gameOverPanel.SetActive(true);
+            AudioManager.Instance.StopMusic("background-music"); //stops music in background
+            AudioManager.Instance.PlaySFX("game-over"); //plays game over sound
             StartCoroutine(ReturnToMenu());
         }
 

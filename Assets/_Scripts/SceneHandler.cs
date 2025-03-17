@@ -41,6 +41,11 @@ public class SceneHandler : SingletonMonoBehavior<SceneHandler>
             transitionCanvas.DOLocalMoveX(initXPosition + transitionCanvas.rect.width, animationDuration).SetEase(animationType);
             StartCoroutine(LoadSceneAfterTransition(levels[nextLevelIndex]));
             nextLevelIndex++;
+            if(nextLevelIndex == 2) //plays transition sound after completing level
+            {
+                AudioManager.Instance.PlaySFX("next-level");
+            }
+            AudioManager.Instance.PlayMusic("background-music");
         }
     }
 
@@ -49,6 +54,7 @@ public class SceneHandler : SingletonMonoBehavior<SceneHandler>
         transitionCanvas.DOLocalMoveX(initXPosition + transitionCanvas.rect.width, animationDuration).SetEase(animationType);
         StartCoroutine(LoadSceneAfterTransition(menuScene));
         nextLevelIndex = 0;
+        AudioManager.Instance.PlayMusic("menu-music");
     }
 
     private IEnumerator LoadSceneAfterTransition(string scene)
